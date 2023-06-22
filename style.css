@@ -1,3 +1,21 @@
 body{
     font-family: 'Open Sans';
+    background-color: rgba(245, 245, 245, 0.692);
+}
+
+h1, h2{
+    font-family: 'Poppins';
+}
+
+h1{
+    font-size: 1rem;
+}
+
+h2{
+    font-size: 4rem;
+    color: black;
+}
+
+span{
+    color:blueviolet
 }
