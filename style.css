@@ -19,3 +19,29 @@ h2{
 span{
     color:blueviolet
 }
+
+.Projects{
+    display: inline-block;
+    margin: 10px;
+}
+
+.Resume{
+    display: inline-block;
+    margin: 10px;
+}
+
+.Me{
+    display: inline-block;
+    margin: 10px;
+
+}
+
+.Awards{
+    display: inline-block;
+    margin: 10px;
+}
+
+.Misc{
+    display: inline-block;
+    margin: 10px;
+}
