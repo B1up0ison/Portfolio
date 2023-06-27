@@ -33,7 +33,6 @@ span{
 .Me{
     display: inline-block;
     margin: 10px;
-
 }
 
 .Awards{
@@ -44,4 +43,22 @@ span{
 .Misc{
     display: inline-block;
     margin: 10px;
+}
+
+
+
+
+
+li{
+    list-style: none;
+}
+.header{
+    display: inline-flex;
+    gap: 5px;
+}
+
+
+.Box-Container{
+    display: flex;
+    justify-content: space-around;
 }
