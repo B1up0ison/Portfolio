@@ -21,27 +21,27 @@ span{
 }
 
 .Projects{
-    display: inline-block;
+    
     margin: 10px;
 }
 
 .Resume{
-    display: inline-block;
+    
     margin: 10px;
 }
 
 .Me{
-    display: inline-block;
+    
     margin: 10px;
 }
 
 .Awards{
-    display: inline-block;
+    
     margin: 10px;
 }
 
 .Misc{
-    display: inline-block;
+    
     margin: 10px;
 }
 
@@ -62,3 +62,34 @@ li{
     display: flex;
     justify-content: space-around;
 }
+
+
+
+
+
+@media (max-width: 1600px) {
+    .Box-Container{
+        display: inline-block;
+    }
+}
+
+@media (max-width: 670px) {
+    .Box-Container > .Projects{
+        display: block;
+        flex-shrink: 10;
+    }
+    .Box-Container > .Resume{
+        display: block;
+        flex-shrink: 10;
+    }
+    .Box-Container > .Me{
+        display: block;
+        flex-shrink: 10;
+    }
+}
+
+
+.Misc > .contactText{
+    
+}
+
