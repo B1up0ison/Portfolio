@@ -1,95 +1,82 @@
-body{
-    font-family: 'Open Sans';
-    background-color: rgba(245, 245, 245, 0.692);
+.background{ 
+    background-color: aqua;
 }
 
-h1, h2{
-    font-family: 'Poppins';
+.gradient-background-blue {
+    background: linear-gradient(300deg, #8bbecf, #2934ce);
+    background-size: 180% 180%;
+    animation: gradient-animation 18s ease infinite;
 }
 
-h1{
-    font-size: 1rem;
-}
-
-h2{
-    font-size: 4rem;
-    color: black;
-}
-
-span{
-    color:blueviolet
-}
-
-.Projects{
-    
-    margin: 10px;
-}
-
-.Resume{
-    
-    margin: 10px;
-}
-
-.Me{
-    
-    margin: 10px;
-}
-
-.Awards{
-    
-    margin: 10px;
-}
-
-.Misc{
-    
-    margin: 10px;
+.gradient-background-light-blue {
+    background: linear-gradient(300deg, #000000, #0011ff);
+    background-size: 180% 180%;
+    animation: gradient-animation 18s ease infinite;
 }
 
 
+.gradient-background-green {
+    background: linear-gradient(300deg, #8bbecf, #0de09a);
+    background-size: 180% 180%;
+    animation: gradient-animation 18s ease infinite;
+} 
 
+.gradient-background-red {
+    background: linear-gradient(300deg, #eedf0c, #ec0808);
+    background-size: 180% 180%;
+    animation: gradient-animation 18s ease infinite;
+} 
 
-
-li{
-    list-style: none;
+.gradient-background-black {
+    background: linear-gradient(300deg, #777771, #0c0b0b);
+    background-size: 180% 180%;
+    animation: gradient-animation 18s ease infinite;
 }
-.header{
-    display: inline-flex;
-    gap: 5px;
+
+.dark_mode_background {
+    background-color: #426275
+}
+
+.light_mode_background {
+    background-color: rgb(91, 165, 199);
 }
 
 
-.Box-Container{
-    display: flex;
-    justify-content: space-around;
+#contactSecUL {
+    color: rgb(25, 0, 255) !important;
 }
 
+#contactSecUL li {
+    color: rgb(33, 14, 65) !important;
+}
 
+.errpy {
+    color: rgb(119, 0, 255) !important;
+}
 
+.nerrpy {
+    color: rgb(0, 0, 0) !important;
+} 
 
-
-@media (max-width: 1600px) {
-    .Box-Container{
-        display: inline-block;
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
     }
 }
 
-@media (max-width: 670px) {
-    .Box-Container > .Projects{
-        display: block;
-        flex-shrink: 10;
-    }
-    .Box-Container > .Resume{
-        display: block;
-        flex-shrink: 10;
-    }
-    .Box-Container > .Me{
-        display: block;
-        flex-shrink: 10;
-    }
+#img {
+    border-radius: 50%;
 }
 
-
-.Misc > .contactText{
-    
+#round {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    overflow: hidden;
 }
-
