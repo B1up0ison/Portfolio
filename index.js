@@ -1,113 +1,96 @@
 var i = 0 //this is the index.js
 
-const ButtonOne = document.querySelector("#dark_mode");             //first button that changes to dark mode
-const ButtonTwo = document.querySelector("#resumeButton");          //second button for resume
+const $ButtonOne = $("#dark_mode");             //first button that changes to dark mode
+const $ButtonTwo = $("#resumeButton");          //second button for resume
 
-const TitleSec = document.querySelector("#title");                  //title
+const $TitleSec = $("#title");                  //title
 
-const BigBody = document.querySelector("body")                      //body 
-BigBody.classList.add("dark_mode_background");
+const $BigBody = $("body");                     //body 
+$BigBody.addClass("dark_mode_background");
 
-const ContactSec = document.querySelector("#contact");              //footer
-const ContactSecUL = document.querySelectorAll('#contactSecUL');    //UL element from ContactSec
-const ContactSecP = document.getElementById('contactP');            //P element from ContactSec
+const $ContactSec = $("#contact");              //footer
+const $ContactSecUL = $("#contactSecUL");       //UL element from ContactSec
+const $ContactSecP = $("#contactP");            //P element from ContactSec
 
-const ContactSecMilk = document.getElementById('milk');
-const ContactSecSilk = document.getElementById('silk');
+const $ContactSecMilk = $("#milk");
+const $ContactSecSilk = $("#silk");
+
+const $TitleH1 = $("#EepyTwo");                 //title H1
+const $TitleHeader = $("#EepyOne");             //title header
 
 
-const TitleH1 = document.getElementById("EepyTwo");                  //title H1
-const TitleHeader = document.getElementById('EepyOne');              //title header
-
-
-ButtonOne.addEventListener("click", handleClick)
-
-function handleClick() {
+$ButtonOne.on("click", function () {
     if(i == 0){
 
-        TitleH1.style.color = "yellow";
-        TitleHeader.style.setProperty('color', 'yellow', 'important'); 
-       
-        ButtonOne.classList.remove("gradient-background-blue");
-        ButtonTwo.classList.remove("gradient-background-blue");
+        $TitleH1.css("color", "yellow");
+        $TitleHeader.attr('style', 'color: yellow !important'); 
+    
+        $ButtonOne.removeClass("gradient-background-blue");
+        $ButtonTwo.removeClass("gradient-background-blue");
 
-        
-        ButtonOne.style.color = 'yellow';
-        ButtonTwo.style.color = 'yellow';
+        $ButtonOne.css("color", "yellow");
+        $ButtonTwo.css("color", "yellow");
 
+        $ContactSecP.attr('style', 'color: yellow !important'); 
 
-        ContactSecP.style.setProperty('color', 'yellow', 'important'); 
+        $TitleSec.removeClass("gradient-background-blue");
+        $ContactSec.removeClass("gradient-background-blue");
 
+        $ButtonOne.text("Light Mode");
 
-        TitleSec.classList.remove("gradient-background-blue");
-        ContactSec.classList.remove("gradient-background-blue");
+        $BigBody.removeClass("dark_mode_background").addClass("light_mode_background");
 
-        ButtonOne.innerHTML = "Light Mode";
-
-
-        BigBody.classList.remove("dark_mode_background");  
-        BigBody.classList.add("light_mode_background");
+        $ButtonOne.addClass("gradient-background-light-blue");
+        $ButtonTwo.addClass("gradient-background-light-blue");
 
 
-        ButtonOne.classList.add("gradient-background-light-blue");
-        ButtonTwo.classList.add("gradient-background-light-blue");
-
-
-        if (ContactSecMilk) {
-            ContactSecMilk.style.setProperty('color', 'yellow', 'important');
+        if ($ContactSecMilk.length) {
+            $ContactSecMilk.attr('style', 'color: yellow !important'); 
         }
 
-        if (ContactSecSilk) {
-            ContactSecSilk.style.setProperty('color', 'yellow', 'important');
+        if ($ContactSecSilk.length) {
+            $ContactSecSilk.attr('style', 'color: yellow !important'); 
         }
 
+        $TitleSec.addClass("gradient-background-light-blue");
+        $ContactSec.addClass("gradient-background-light-blue");
 
-        TitleSec.classList.add("gradient-background-light-blue");
-        ContactSec.classList.add("gradient-background-light-blue");
-
-        i = i + 1;
+        i=1;
     }else if (i == 1){ 
+        $TitleH1.css("color", "black");
+        $TitleHeader.attr('style', 'color: black !important'); 
         
-        ButtonOne.classList.remove("gradient-background-light-blue");
-        ButtonTwo.classList.remove("gradient-background-light-blue");
+        $ButtonOne.removeClass("gradient-background-light-blue");
+        $ButtonTwo.removeClass("gradient-background-light-blue");
 
-        ButtonOne.style.color = 'black';
-        ButtonTwo.style.color = 'black';
+        $ButtonOne.css('color', 'black');
+        $ButtonTwo.css('color', 'black');
 
+        $ContactSecP.attr('style', 'color: black !important'); 
 
-        ContactSecP.style.setProperty('color', 'black', 'important'); 
+        $TitleSec.removeClass("gradient-background-light-blue");
+        $ContactSec.removeClass("gradient-background-light-blue");
 
+        $ButtonOne.text("Dark Mode");
 
-        TitleSec.classList.remove("gradient-background-light-blue");
-        ContactSec.classList.remove("gradient-background-light-blue");
+        $BigBody.removeClass("light_mode_background").addClass("dark_mode_background");
 
-        ButtonOne.innerHTML = "Dark Mode";
-
-
-        BigBody.classList.add("dark_mode_background");  
-        BigBody.classList.remove("light_mode_background");
-
-
-        ButtonOne.classList.add("gradient-background-blue");
-        ButtonTwo.classList.add("gradient-background-blue");
+        $ButtonOne.addClass("gradient-background-blue");
+        $ButtonTwo.addClass("gradient-background-blue");
 
         
-        if (ContactSecMilk) {
-            ContactSecMilk.style.setProperty('color', 'black', 'important');
+        if ($ContactSecMilk.length) {
+            $ContactSecMilk.attr('style', 'color: black !important'); 
         }
 
-        if (ContactSecSilk) {
-            ContactSecSilk.style.setProperty('color', 'black', 'important');
+        if ($ContactSecSilk.length) {
+            $ContactSecSilk.attr('style', 'color: black !important'); 
         }
         //Overrides elements with inline style directly from JS
 
+        $TitleSec.addClass("gradient-background-blue");
+        $ContactSec.addClass("gradient-background-blue");
 
-        TitleSec.classList.add("gradient-background-blue");
-        ContactSec.classList.add("gradient-background-blue");
-
-        TitleH1.style.color = "black";
-        TitleHeader.style.setProperty('color', 'black', 'important'); 
-
-        i = i - 1;
+        i=0;
     }
-}
+});
